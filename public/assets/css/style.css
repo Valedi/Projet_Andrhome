@@ -1843,6 +1843,7 @@ ul.level1 {
 	padding: 0px;
 	width: 100%;
 	margin: auto;
+	margin-top: 35px;
 }
 .our-features-box ul {
 	list-style: none;
@@ -2282,7 +2283,7 @@ ul.level1 {
 	
 }
 .parallax-2 {
-	background-image: url("../images/parralax-bg2.jpg");
+	background-image: url("../../images/parralax-bg2.jpg");
 	padding-top: 55px;
 	padding-bottom: 55px;
 	background-position:bottom
@@ -7979,7 +7980,7 @@ address {
 .logo img {width:120px}
 #thm-slideshow {margin-top:-47px}
 .toplinks .links {display:none}
-.promo-section { margin-top:25px}
+.promo-section {margin-top:25px}
 .promo-section img {
     width: 100%;
 	margin-bottom:20px

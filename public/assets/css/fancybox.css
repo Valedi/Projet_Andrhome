@@ -267,7 +267,7 @@ div#fancybox-overlay {
 }
 #fancybox-title-over {
 	padding: 10px;
-	/*background-image: url('../images/fancybox/fancy_title_over.png');*/
+	/*background-images: url('../images/fancybox/fancy_title_over.png');*/
 	display: block;
 }
 .fancybox-title-float {

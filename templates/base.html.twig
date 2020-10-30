@@ -36,15 +36,26 @@
 <main class="containerfluid">
     <div class="row">
         <div class="col">
-           {# {% include'components/_nav.html.twig' %}
-            {% endfor %}#}
+           {% include'components/nav.html.twig' %}
             {% block body %}{% endblock %}
+            {% include'components/footer.html.twig' %}
         </div>
     </div>
 </main>
 {% block javascripts %}
     <!-- JavaScript -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/common.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/countdown.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.mobile-menu.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/revolution-slider.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/revolution.extension.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/js.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/js2.js') }}"></script>
+
+    {#<script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/countdown.js"></script>
@@ -142,7 +153,7 @@
                             h_offset:0,
                             v_offset:30,
                             space:5,
-                            {#tmp:'<span class="tp-bullet-img-wrap">  <span class="tp-bullet-image"></span></span><span class="tp-bullet-title">{{title}}</span>'#}
+                            #}{#tmp:'<span class="tp-bullet-img-wrap">  <span class="tp-bullet-images"></span></span><span class="tp-bullet-title">{{title}}</span>'#}{#
                         }
                     },
                     viewPort: {
@@ -181,7 +192,7 @@
             }
         });	/*ready*/
     </script>
-
+#}
 {% endblock %}
 </body>
 </html>
