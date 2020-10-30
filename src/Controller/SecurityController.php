@@ -28,4 +28,16 @@ class SecurityController extends AbstractController
     }
 
 
+    public function login_register()
+    {
+        # Transmettre à la vue
+        return $this->render('security/login_register.html.twig');
+    }
+
+    public function login_register2()
+    {
+        # Transmettre à la vue
+        return $this->render('security/login_register2.html.twig');
+    }
+
 }

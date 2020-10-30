@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+<body class="customer-account-login inner-page">
+<div id="page">
+
+
+
+    <!-- Main Container -->
+    <section class="main-container col1-layout bounceInUp animated">
+        <div class="main container">
+            <div class="account-login">
+                <div class="page-title">
+                    <h1>S'identifier ou créer un compte</h1>
+                </div>
+                <fieldset class="col2-set">
+                    <legend>S'identifier ou créer un compte</legend>
+                    <div class="col-1 new-users"><strong>New Customers</strong>
+                        <div class="content">
+                            <p>En créant un compte dans notre boutique, vous serez en mesure de passer plus rapidement au processus de paiement, de stocker plusieurs adresses de livraison, de consulter et de suivre vos commandes dans votre compte et plus encore.</p>
+                            <ul class="form-list">
+                                <li>
+                                    <label for="prenom">Prenom <span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="" class="input-text" id="prenom" value="" name="prenom">
+                                </li>
+                                <li>
+                                    <label for="nom">Nom <span class="required">*</span></label>
+                                    <br>
+                                    <input type="password" title="" id="nom" class="input-text" name="nom">
+                                </li>
+                                <li>
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="" class="input-text" id="email" value="" name="">
+                                </li>
+                                <li>
+                                    <label for="adresse">Adresse <span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="" id="adresse" class="input-text" name="adresse">
+                                </li>
+                                <li>
+                                    <label for="telephone">Téléphone <span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="" id="telephone" class="input-text" name="telephone">
+                                </li>
+                                <li>
+                                    <label for="pass">Mot de passe <span class="required">*</span></label>
+                                    <br>
+                                    <input type="password" title="" id="pass" class="input-text" name="pass">
+                                </li>
+                            </ul>
+                            <div class="buttons-set">
+                                <button class="button create-account"><span>Inscription</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 registered-users"><strong>Connexion</strong>
+                        <div class="content">
+                            <p>Si vous avez déjà un compte, merci de vous identifier</p>
+                            <ul class="form-list">
+                                <li>
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="" class="input-text" id="email" value="" name="">
+                                </li>
+                                <li>
+                                    <label for="pass">Mot de passe <span class="required">*</span></label>
+                                    <br>
+                                    <input type="password" title="" id="pass" class="input-text" name="pass">
+                                </li>
+                            </ul>
+                            <p class="required">* Champs obligatoires</p>
+                            <div class="buttons-set">
+                                <button id="send2" name="" type="submit" class="button login"><span>Login</span></button>
+                                <a class="forgot-word" href="#">Mot de passe oublié?</a> </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </section>
+    <!-- Main Container End -->
+
+    {% endblock %}
+

@@ -16,4 +16,10 @@ class DefaultController extends AbstractController
         return $this->render('default/index.html.twig');
     }
 
+    public function panier()
+    {
+        # Transmettre à la vue
+        return $this->render('default/panier.html.twig');
+    }
+
 }
