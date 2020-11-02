@@ -1,4 +1,15 @@
 index:
     path: /
     controller: App\Controller\DefaultController::index
-
+categorie_androide:
+    path: /categorie_androide
+    controller: App\Controller\DefaultController::categorie_androide
+categorie_accessoire:
+    path: /categorie_accessoire
+    controller: App\Controller\DefaultController::categorie_accessoire
+fiche_produit_androide:
+    path: /fiche_produit_androide
+    controller: App\Controller\DefaultController::fiche_produit_androide
+fiche_produit_accessoire:
+    path: /fiche_produit_accessoire
+    controller: App\Controller\DefaultController::fiche_produit_accessoire

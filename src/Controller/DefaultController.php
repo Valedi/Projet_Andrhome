@@ -10,8 +10,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends AbstractController
 {
 
+    /**
+     *
+     */
     public function index()
-
     {
         # Transmettre à la vue
         return $this->render('default/index.html.twig');
@@ -34,4 +36,29 @@ class DefaultController extends AbstractController
         # Transmettre à la vue
         return $this->render('default/gestion_admin.html.twig');
     }
+
+    public function categorie_androide()
+    {
+        # Transmettre à la vue
+        return $this->render('default/categorie_androide.html.twig');
+    }
+
+    public function categorie_accessoire()
+    {
+        # Transmettre à la vue
+        return $this->render('default/categorie_accessoire.html.twig');
+    }
+    public function fiche_produit_androide()
+
+    {
+        # Transmettre à la vue
+        return $this->render('default/fiche_produit_androide.html.twig');
+    }
+    public function fiche_produit_accessoire()
+
+    {
+        # Transmettre à la vue
+        return $this->render('default/fiche_produit_accessoire.html.twig');
+    }
+
 }
