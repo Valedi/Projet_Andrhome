@@ -1,0 +1,118 @@
+{% extends "base.html.twig" %}
+    {% block title %}Connexion ou inscription{% endblock %}
+
+{% block body %}
+
+
+<body class="customer-account-login inner-page">
+<div id="page">
+    <!-- Header -->
+
+
+    {% include'components/nav.html.twig' %}
+
+    <!-- Main Container -->
+    <section class="main-container col1-layout bounceInUp animated">
+        <div class="main container">
+            <!-- <div class="account-login"> -->
+            <div class="admin-account">
+
+
+                <fieldset class="col2-set">
+
+
+                    <div class="col-1 new-users">
+                        <div class="page-title">
+                            <h1>Connexion</h1>
+                        </div>
+                        <div class="content">
+                            <ul class="form-list">
+                                <li>
+                                    <label for="ref">Nom<span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="" class="input-text" id="ref" value="" name="">
+                                </li>
+                                <li>
+                                    <label for="name">Prenom <span class="required">*</span></label>
+                                    <br>
+                                    <input type="name" title="" id="name" class="input-text" name="">
+                                </li>
+                                <li>
+                                    <label for="function">Email <span class="required">*</span></label>
+                                    <br>
+                                    <input type="function" title="" id="function" class="input-text" name="">
+                                </li>
+                                <li>
+                                    <label for="ref">Mot de passe<span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="" class="input-text" id="ref" value="" name="">
+                                </li>
+                                <li>
+                                    <label for="ref">Adresse <span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="" class="input-text" id="ref" value="" name="">
+                                </li>
+                                <li>
+                                    <label for="ref">Code postal <span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="" class="input-text" id="ref" value="" name="">
+                                </li>
+                                <li>
+                                    <label for="ref">Ville <span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="" class="input-text" id="ref" value="" name="">
+                                </li>
+                                <li>
+                                    <label for="ref">Téléphone <span class="required">*</span></label>
+                                    <br>
+                                    <input type="text" title="" class="input-text" id="ref" value="" name="">
+                                </li>
+                            </ul>
+                            <div class="buttons-set">
+                                <button class="button create-account"><span>Inscription</span></button>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-2 registered-users">
+                        <div class="page-title">
+                            <h1>Inscription</h1>
+                        </div>
+                        <div class="content">
+
+                            <ul class="form-list">
+
+                                <li>
+                                    <label for="description">Email <span class="required">*</span></label>
+                                    <br>
+                                    <input type="description" title="" id="description" class="input-text" name="">
+                                </li>
+                                <li>
+                                    <label for="prix">Mot de passe<span class="required">*</span></label>
+                                    <br>
+                                    <input type="prix" title="" id="prix" class="input-text" name="">
+                                </li>
+                            </ul>
+
+                            <div class="buttons-set">
+                                <button class="button create-account"><span>Connexion</span></button>
+                            </div>
+                        </div>
+                    </div>
+            </fieldset>
+
+            <br>
+            <br>
+                <p class="required">* Champs obligatoires</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+</div>
+</section>
+<!-- Main Container End -->
+{% endblock %}
