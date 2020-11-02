@@ -3,6 +3,11 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
+
+    <body class="customer-account-login inner-page">
+    <div id="page">
+     {% include'components/nav.html.twig' %}
+
     <div class="container-fluid">
         <section class="main-container col1-layout bounceInUp animated">
             <div class="main container col-lg-12">
@@ -30,7 +35,7 @@
                                 <p class="required">* Required Fields</p>
                                 <div class="buttons-set">
                                     <button id="send2" name="" type="submit" class="button login"><span>Login</span></button>
-
+                                </div>
                             </div>
                         </div>
                     </fieldset>

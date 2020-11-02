@@ -90,7 +90,7 @@
 	left: 3%;
 }
 .sequence-prev {
-	background: url(../images/slide-left-arrow.png) no-repeat top left;
+	background: url(../../images/slide-left-arrow.png) no-repeat top left;
 	position: absolute;
 	right: 135px;
 	top: -20px;
@@ -109,7 +109,7 @@
 	color: #333;
 	font-size: 40px;
 	padding: 5px 15px;
-	background: url(../images/slide-right-arrow.png) no-repeat top left;
+	background: url(../../images/slide-right-arrow.png) no-repeat top left;
 	height: 77px;
 	width: 77px
 }
