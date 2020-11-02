@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DeliveryInfo extends AbstractController
 {
     /**
-     * @Route("delivery/info", name="deliveryInfo_shippinfIngo", methods={"GET"})
+     * @Route("delivery/info", name="deliveryInfo_shippinfInfo", methods={"GET"})
      */
     public function shippingInfo()
     {
