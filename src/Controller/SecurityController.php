@@ -27,5 +27,14 @@ class SecurityController extends AbstractController
         return $this->render('security/loginadmin.html.twig');
     }
 
+    /**
+     * @Route("paniertest", name="panier_test")
+     */
+    public function panierTest()
+    {
+        # Transmettre à la vue
+        return $this->render('security/paniertest.html.twig');
+    }
+
 
 }
