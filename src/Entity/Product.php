@@ -45,14 +45,20 @@ class Product
     private $price;
 
     /**
-     * @ORM\Column(type="string", length=100)
-     */
-    private $category;
-
-    /**
      * @ORM\ManyToMany(targetEntity=DetailCommande::class, inversedBy="products")
      */
     private $detail_commande;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="products")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $categorie;
+
+    /**
+     * @ORM\Column(type="string", length=80)
+     */
+    private $alias;
 
     public function __construct()
     {
@@ -124,18 +130,6 @@ class Product
         return $this;
     }
 
-    public function getCategory(): ?string
-    {
-        return $this->category;
-    }
-
-    public function setCategory(string $category): self
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
     /**
      * @return Collection|DetailCommande[]
      */
@@ -156,6 +150,30 @@ class Product
     public function removeDetailCommande(DetailCommande $detailCommande): self
     {
         $this->detail_commande->removeElement($detailCommande);
+
+        return $this;
+    }
+
+    public function getCategorie(): ?Category
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?Category $categorie): self
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getAlias(): ?string
+    {
+        return $this->alias;
+    }
+
+    public function setAlias(string $alias): self
+    {
+        $this->alias = $alias;
 
         return $this;
     }
