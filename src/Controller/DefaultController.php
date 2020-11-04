@@ -35,6 +35,7 @@ class DefaultController extends AbstractController
      */
     public function gestionAdmin()
     {
+
         # Transmettre à la vue
         return $this->render('default/gestion_admin.html.twig');
     }

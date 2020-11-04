@@ -35,11 +35,6 @@ class Product
     private $featuredImage;
 
     /**
-     * @ORM\Column(type="string", length=100)
-     */
-    private $function;
-
-    /**
      * @ORM\Column(type="integer")
      */
     private $price;
@@ -59,6 +54,16 @@ class Product
      * @ORM\Column(type="string", length=80)
      */
     private $alias;
+
+    /**
+     * @ORM\Column(type="string", length=80)
+     */
+    private $reference;
+
+    /**
+     * @ORM\Column(type="string", length=80)
+     */
+    private $android_function;
 
     public function __construct()
     {
@@ -102,18 +107,6 @@ class Product
     public function setFeaturedImage(string $featuredImage): self
     {
         $this->featuredImage = $featuredImage;
-
-        return $this;
-    }
-
-    public function getFunction(): ?string
-    {
-        return $this->function;
-    }
-
-    public function setFunction(string $function): self
-    {
-        $this->function = $function;
 
         return $this;
     }
@@ -174,6 +167,30 @@ class Product
     public function setAlias(string $alias): self
     {
         $this->alias = $alias;
+
+        return $this;
+    }
+
+    public function getReference(): ?string
+    {
+        return $this->reference;
+    }
+
+    public function setReference(string $reference): self
+    {
+        $this->reference = $reference;
+
+        return $this;
+    }
+
+    public function getAndroidFunction(): ?string
+    {
+        return $this->android_function;
+    }
+
+    public function setAndroidFunction(string $android_function): self
+    {
+        $this->android_function = $android_function;
 
         return $this;
     }
