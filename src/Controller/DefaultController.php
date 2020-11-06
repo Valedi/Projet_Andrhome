@@ -4,12 +4,13 @@
 namespace App\Controller;
 
 
+use App\Entity\Category;
+use App\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
-
     /**
      *
      */
@@ -36,29 +37,35 @@ class DefaultController extends AbstractController
         # Transmettre à la vue
         return $this->render('default/gestion_admin.html.twig');
     }
-
-    public function categorie_androide()
+    /**
+     * @Route("/{alias}", name="default_categorie", methods={"GET"})
+     */
+    public function category($alias)
     {
+        $category = $this->getDoctrine()
+        ->getRepository(Category::class)
+        ->findOneBy(['alias' => $alias]);
+
+        $products = $category->getProducts();
         # Transmettre à la vue
-        return $this->render('default/categorie_androide.html.twig');
+        return $this->render('default/categorie.html.twig',
+            [
+            'products' => $products
+        ]);
     }
-
-    public function categorie_accessoire()
+    /**
+     * @Route("/{category}/{alias}_{id}.html", name="default_product", methods={"GET"})
+     */
+    public function product($id)
     {
-        # Transmettre à la vue
-        return $this->render('default/categorie_accessoire.html.twig');
-    }
-    public function fiche_produit_androide()
+        $product = $this->getDoctrine()
+            ->getRepository(Product::class)
+            ->find($id);
 
-    {
         # Transmettre à la vue
-        return $this->render('default/fiche_produit_androide.html.twig');
-    }
-    public function fiche_produit_accessoire()
-
-    {
-        # Transmettre à la vue
-        return $this->render('default/fiche_produit_accessoire.html.twig');
+        return $this->render('default/fiche_produit.html.twig',  [
+            'product' => $product
+        ]);
     }
 
 }

@@ -1,0 +1,76 @@
+﻿{% extends "base.html.twig" %}
+{% block body %}
+
+  <body class="inner-page">
+  {% include'components/nav.html.twig' %}
+
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container">
+    </div>
+  </div>
+  <!-- Main Container -->
+  <section class="main-container col1-layout wow bounceInUp animated">
+    <div class="main container">
+      <div class="col-main">
+        <div class="row">
+
+          <div class="product-view">
+
+            <div class="product-next-prev"> <a class="product-next" href="#"><span></span></a> <a class="product-prev" href="#"><span></span></a> </div>
+            <div class="product-essential">
+              <form action="#" method="post" id="product_addtocart_form">
+                <input name="form_key" value="6UbXroakyQlbfQzK" type="hidden">
+                <div class="product-img-box col-sm-4 col-xs-12">
+                  <div class="new-label new-top-left"> New </div>
+                  <div class="product-image">
+                    <div class="large-image">
+                      <a href="{{ path('default_product', {
+                        'category' : product.categorie.alias,
+                        'alias' : product.alias,
+                        'id' : product.id
+                      }) }}" title="{{product.name}}" class="product-image">
+                        <img src="{{ asset('uploads/images/' ~ product.featuredImage ) }}"
+                             alt="{{product.name}}" class="card-img-top">
+                      </a>
+                    </div>
+                    <div class="flexslider flexslider-thumb">
+                    </div>
+                  </div>
+                  <!-- end: more-images -->
+                </div>
+                <div class="product-shop col-sm-8 col-xs-12">
+                  <div class="product-name">
+                    <h1>{{ product.name }}</h1>
+                  </div>
+                      <div>{{ product.function }}</div>
+                  <div class="price-block">
+                    <div class="price-box">
+                      <p class="special-price"> <span class="price-label">Special Price</span> <span id="product-price-48" class="price"> {{ product.price}}€</span> </p>
+
+                    </div>
+                    <p class="availability in-stock pull-right"><span>In Stock</span></p>
+                  </div>
+
+                  <div class="short-description">
+                    <h2>Description produit (physique)</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero. Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem. </p>
+                  </div>
+                  <div class="add-to-box">
+                    <div class="add-to-cart">
+
+                      <button onClick="productAddToCartForm.submit(this)" class="button btn-cart" title="Add to Cart" type="button"><span>Add to Cart</span></button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Main Container End -->
+
+{% endblock %}
