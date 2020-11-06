@@ -4,11 +4,8 @@
 {% block body %}
 
 
-<body class="customer-account-login inner-page">
+<body class="customer-account-index customer-account admin-account inner-page">
 <div id="page">
-    <!-- Header -->
-
-
     {% include'components/nav.html.twig' %}
 
     <!-- Main Container -->
@@ -30,7 +27,7 @@
             <br>
 
             <div class ="buttons-set">
-                <button class="button create-account"><span>Afficher la liste des commandes</span></button>
+                <button class="button create-account" href="https://dashboard.stripe.com/test/payments?status%5B%5D=successful" title="liste commandes" target="_blank"><span>Afficher la liste des commandes</span></button>
             </div>
         </div>
         <br>

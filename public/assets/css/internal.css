@@ -661,8 +661,8 @@ div#review-buttons-container {
 	font-size: 16px;
 }
 .required {
-	color: #ff0000;
-	font-size: 12px;
+	color: #c2a476;
+	font-size: 16px;
 }
 input[type=radio], input[type=checkbox] { margin-right:4px; }
 /*2. Address Book */

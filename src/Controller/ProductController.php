@@ -10,6 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
@@ -24,8 +25,8 @@ class ProductController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstr
 
     /**
      * Formulaire permettant d'ajouter un Produit
-     * @Route("/produit/creer-un-produit", name="product_create", methods={"GET|POST"})
-     *
+     * @Route("/gestion/creer-un-produit", name="gestion_admin", methods={"GET|POST"})
+     ** @IsGranted("ROLE_ADMIN")
      */
     public function createProduct(Request $request, SluggerInterface $slugger){
         #1a. Création d'un nouvel article
@@ -37,8 +38,16 @@ class ProductController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstr
             #2a. Référence du produit
             ->add('reference', TextType::class)
 
-            #2a bis. nom du produit
+            # nom du produit
             ->add('name', TextType::class)
+
+            # description du produit
+            ->add('description', TextType::class)
+
+            # prix du produit
+            ->add('price', MoneyType::class, [
+                'divisor' => 100,
+            ])
 
             #2b. Categorie du produit (/androide ou /Accessoire (Liste déroulante)
             ->add('categorie', EntityType::class, [
@@ -46,16 +55,17 @@ class ProductController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstr
                 'choice_label' => 'name',
             ])
 
-            #2c. Fonction de l'androide  (Liste déroulante) FIXME utiliser choicetype
-            //->add('android_function', EntityType::class, [
-           //     'class' => ,
-            //    'choice_label' => 'name',
-            //])
+
             #2d. Upload Image du produit
             ->add('featuredImage', FileType::class)
 
             #2e. Bouton Submit de l'article
-            ->add('submit', SubmitType::class)
+            ->add('submit', SubmitType::class, [
+                'label' => 'Ajouter le produit',
+                'attr' => [
+                    'class' => 'button create-account'
+                ]
+            ])
 
             #2f. Permet de récupérer le formulaire généré
             ->getForm();
@@ -113,18 +123,15 @@ class ProductController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstr
             $this->addFlash('notice', 'votre article est en ligne ! ');
 
             # 4e. Redirection
-            return $this->redirectToRoute('default_categorie', [
-                'alias'=> $product->getAlias()
-            ]);
-
+            return $this->redirectToRoute('gestion_admin');
+            #, [
+                #'alias'=> $product->getAlias()
+            #]);
         }
 
         #5. Transmission du formulaire à la vue
         return $this->render('default/gestion_admin.html.twig', [
             'form' => $form->createView()
         ]);
-
     }
-
-
 }

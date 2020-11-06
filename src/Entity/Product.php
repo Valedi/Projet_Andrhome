@@ -35,7 +35,7 @@ class Product
     private $featuredImage;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="decimal")
      */
     private $price;
 
@@ -60,10 +60,6 @@ class Product
      */
     private $reference;
 
-    /**
-     * @ORM\Column(type="string", length=80)
-     */
-    private $android_function;
 
     public function __construct()
     {
@@ -183,15 +179,5 @@ class Product
         return $this;
     }
 
-    public function getAndroidFunction(): ?string
-    {
-        return $this->android_function;
-    }
 
-    public function setAndroidFunction(string $android_function): self
-    {
-        $this->android_function = $android_function;
-
-        return $this;
-    }
 }
