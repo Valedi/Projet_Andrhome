@@ -7,23 +7,23 @@
   <div class="breadcrumbs">
     <div class="container">
       <div class="row">
-        {% for product in products%}
         <div class="col-xs-12">
-          {% endfor %}
+          </ul>
         </div>
       </div>
     </div>
   </div>
   <!-- Breadcrumbs End -->
   <!-- Main Container -->
-  <section class="main-container -layout bounceInUp animated">
+  <section class="main-container col2-left-layout bounceInUp animated">
     <div class="container">
       <div class="row">
-        <div class="col-main col-sm-12 col-sm-push-0">
+        <div class="col-main col-sm-9 col-sm-push-3">
           <div class="category-description std">
             <div class="slider-items-products">
               <div id="category-desc-slider" class="product-flexslider hidden-buttons">
                 <div class="slider-items slider-width-col1 owl-carousel owl-theme">
+
                   <!-- Item -->
 
                   <div class="item"> <a href="#"><img alt="" src="../../../superb-html-template/images/category-img2.jpg"></a>
@@ -37,7 +37,7 @@
           </div>
           <article class="col-main">
             <div class="page-title">
-              <h1>Nos produits</h1>
+              <h1>Accessoires</h1>
             </div>
             <div class="toolbar">
               <div class="sorter">
@@ -70,20 +70,12 @@
             </div>
             <div class="category-products">
               <ul class="products-grid">
-                {% for product in products%}
-                <li class="item col-lg-6 col-md-2 col-sm-2 col-xs-4">
+                <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
                   <div class="item-inner">
                     <div class="item-img">
-                      <div class="item-img-info">
-                        <a href="{{ path('default_product', {
-                          'category' : product.categorie.alias,
-                          'alias' : product.alias,
-                          'id' : product.id
-                        }) }}" title="{{product.name}}" class="product-image">
-                            <img src="{{ asset('uploads/images/' ~ product.featuredImage ) }}"
-                                 alt="{{product.name}}" class="card-img-top">
-                        </a>
+                      <div class="item-img-info"><a href="#" title="Retis lapen casen" class="product-image"><img src="../../../superb-html-template/products-images/product.jpg" alt="Retis lapen casen"></a>
                         <div class="new-label new-top-left">New</div>
+
                         <div class="rating">
                           <div class="ratings">
                             <div class="rating-box">
@@ -96,17 +88,69 @@
                     </div>
                     <div class="item-info">
                       <div class="info-inner">
-                        <div class="item-title"><a href="#" title="Retis lapen casen">{{product.name}}</a> </div>
+                        <div class="item-title"><a href="#" title="Retis lapen casen">Retis lapen casen</a> </div>
                         <div class="item-content">
                           <div class="item-price">
-                            <div class="price-box"><span class="regular-price"><span class="price">{{product.price}}<span>€</span> </div>
+                            <div class="price-box"><span class="regular-price"><span class="price">$125.00</span> </span> </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </li>
-                {% endfor %}
+                <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
+                  <div class="item-inner">
+                    <div class="item-img">
+                      <div class="item-img-info"><a href="#" title="Retis lapen casen" class="product-image"><img src="../../../superb-html-template/products-images/product.jpg" alt="Retis lapen casen"></a>
+                        <div class="rating">
+                          <div class="ratings">
+                            <div class="rating-box">
+                              <div class="rating" style="width:80%"></div>
+                            </div>
+                            <p class="rating-links"><a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-info">
+                      <div class="info-inner">
+                        <div class="item-title"><a href="#" title="Retis lapen casen">Retis lapen casen</a> </div>
+                        <div class="item-content">
+                          <div class="item-price">
+                            <div class="price-box"><span class="regular-price"><span class="price">$125.00</span> </span> </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
+                  <div class="item-inner">
+                    <div class="item-img">
+                      <div class="item-img-info"><a href="#" title="Retis lapen casen" class="product-image"><img src="../../../superb-html-template/products-images/product.jpg" alt="Retis lapen casen"></a>
+
+                        <div class="rating">
+                          <div class="ratings">
+                            <div class="rating-box">
+                              <div class="rating" style="width:80%"></div>
+                            </div>
+                            <p class="rating-links"><a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-info">
+                      <div class="info-inner">
+                        <div class="item-title"><a href="#" title="Retis lapen casen">Retis lapen casen</a> </div>
+                        <div class="item-content">
+                          <div class="item-price">
+                            <div class="price-box"><span class="regular-price"><span class="price">$125.00</span> </span> </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
           </article>
@@ -130,5 +174,4 @@
 
 </body>
 </html>
-
 {% endblock  %}

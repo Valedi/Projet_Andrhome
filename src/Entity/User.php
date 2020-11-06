@@ -6,16 +6,10 @@ use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
- * @UniqueEntity(
- *     fields={"email"},
- *     errorPath="email",
- *     message="Ce compte existe déjà."
- * )
  */
 class User implements UserInterface
 {
@@ -45,7 +39,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=80)
      */
-    private $firstname;
+    private $firtname;
 
     /**
      * @ORM\Column(type="string", length=80)
@@ -160,14 +154,14 @@ class User implements UserInterface
         // $this->plainPassword = null;
     }
 
-    public function getFirstname(): ?string
+    public function getFirtname(): ?string
     {
-        return $this->firstname;
+        return $this->firtname;
     }
 
-    public function setFirstname(string $firstname): self
+    public function setFirtname(string $firtname): self
     {
-        $this->firstname = $firstname;
+        $this->firtname = $firtname;
 
         return $this;
     }

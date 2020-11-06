@@ -4,18 +4,15 @@
 namespace App\Controller;
 
 
-use App\Entity\Category;
-use App\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
+
     /**
-     * page / action : Accueil
+     *
      */
-
-
     public function index()
     {
         # Transmettre à la vue
@@ -39,37 +36,29 @@ class DefaultController extends AbstractController
         # Transmettre à la vue
         return $this->render('default/gestion_admin.html.twig');
     }
-    /**
-     * @Route("/{alias}", name="default_categorie", methods={"GET"})
-     */
-    public function category($alias)
-    {
-        $category = $this->getDoctrine()
-        ->getRepository(Category::class)
-        ->findOneBy(['alias' => $alias]);
 
-        $products = $category->getProducts();
-        # Transmettre à la vue
-        return $this->render('default/categorie.html.twig',
-            [
-            'products' => $products
-        ]);
-    }
-    /**
-     * @Route("/{category}/{alias}_{id}.html", name="default_product", methods={"GET"})
-     */
-    public function product($id)
+    public function categorie_androide()
     {
-        $product = $this->getDoctrine()
-            ->getRepository(Product::class)
-            ->find($id);
-
         # Transmettre à la vue
-        return $this->render('default/fiche_produit.html.twig',  [
-            'product' => $product
-        ]);
+        return $this->render('default/categorie_androide.html.twig');
     }
 
+    public function categorie_accessoire()
+    {
+        # Transmettre à la vue
+        return $this->render('default/categorie_accessoire.html.twig');
+    }
+    public function fiche_produit_androide()
 
+    {
+        # Transmettre à la vue
+        return $this->render('default/fiche_produit_androide.html.twig');
+    }
+    public function fiche_produit_accessoire()
+
+    {
+        # Transmettre à la vue
+        return $this->render('default/fiche_produit_accessoire.html.twig');
+    }
 
 }
