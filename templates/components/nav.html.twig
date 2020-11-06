@@ -2,22 +2,50 @@
 <nav>
     <div class="container">
         <!-- Header Logo -->
-        {#         <div class="logo"><a title="Datson" href="index.html"><img alt="Datson" src="images/logo.png"></a></div>#}
+        <div class="logo"><a title="Datson"><img alt="Datson" src="images/logo4bis.png"></a></div>
         <!-- End Header Logo -->
+
 
         <div class="mm-toggle-wrap">
             <div class="mm-toggle"><i class="fa fa-reorder"></i><span class="mm-label">Menu</span> </div>
         </div>
 
+
+
         <ul class="nav hidden-xs menu-item menu-item-left">
-            <li class="level0 parent drop-menu active"><a href="/"><span>Home</span></a></li>
+
+            <li class="level0 parent drop-menu active"><a href="index.html"><span>Home</span></a>
+
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
             <li class="level0 parent drop-menu"><a href="/androides"><span>Androïdes</span></a>
             <li class="mega-menu"><a href="/accessoires" class="level-top"><span>Accessoires</span></a></li>
+
+            {% if is_granted('ROLE_ADMIN') %}
+                <li class="nav-item"><a class="nav-link" href="#">Gestion administrateur</a></li>
+            {% endif %}
+
         </ul>
 
+
+
         <ul class="nav hidden-xs menu-item menu-item-right">
-            <li class="mega-menu"><a href="/moncompte" class="level-top"><span>Mon compte</span></a></li>
-            <li class="mega-menu"><a href="/paniertest" class="level-top"><span>Mon panier</span></a></li>
+
+            <li class="nav-item"><a class="nav-link" href="#"><span>Mon compte</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span>Mon panier</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a></li>
+
+            {% else %}
+
+            <li class="nav-item"><a class="nav-link" href="{{ path('user_create') }}">Inscription</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('app_login') }}">Connexion</a></li>
+
+            {% endif %}
+
+        </ul>
+
+
+
 
     </div>
 </nav>

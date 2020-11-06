@@ -12,8 +12,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends AbstractController
 {
     /**
-     *
+     * page / action : Accueil
      */
+
+
     public function index()
     {
         # Transmettre à la vue
@@ -67,5 +69,7 @@ class DefaultController extends AbstractController
             'product' => $product
         ]);
     }
+
+
 
 }
