@@ -4,6 +4,7 @@
 
 {% block body %}
 
+
 <body class="customer-account-index customer-account inner-page">
 <div id="page">
     {% include'components/nav.html.twig' %}
@@ -68,10 +69,16 @@
                                 <div class="col2-set">
                                     <div class="col-1">
                                         <h5>Mes Coordonnées</h5>
-                                        <a href="#">Edit</a>
-                                        <p> Edouard ROUBLARD<br>
-                                            e.roub@gmail.com<br>
-                                            <a href="#">Modifier le mot de passe </a> </p>
+                                        <a href="#"></a><br>
+                                        <ul>
+                                            <li> Votre Nom : {{ app.user.lastname }}</li>
+                                            <li> Votre Prenom : {{ app.user.firstname }}</li>
+                                            <li> Votre email de contact : {{ app.user.email }}</li>
+                                            <li> Votre numero de telephone : {{ app.user.telephone }}</li>
+                                        </ul>
+
+
+                                            <a href="#">Modifier vos informations</a> </p>
                                     </div>
 
                                 </div>
@@ -80,25 +87,22 @@
 
                                     <div class="col-1">
                                         <h5> Adresse de Facturation</h5>
-                                        <address>
-                                            Edouard Roublard<br>
-                                            aundh<br>
-                                            tyyrt,  Alabama, 46532<br>
-                                            United States<br>
-                                            T: 454541 <br>
+                                        <ul>
+                                            <li>{{ app.user.adress }}</li>
+                                            <li>{{ app.user.postalcode }}</li>
+                                            <li>{{ app.user.city }}</li>
                                             <a href="#">Modifier l'adresse</a>
-                                        </address>
+                                        </ul>
                                     </div>
                                     <div class="col-2">
                                         <h5>Adresse de Livraison</h5>
-                                        <address>
-                                            Edouard Roublard<br>
-                                            aundh<br>
-                                            tyyrt,  Alabama, 46532<br>
-                                            United States<br>
-                                            T: 454541 <br>
+                                        <ul>
+                                            <li>{{ app.user.adress }}</li>
+                                            <li>{{ app.user.postalcode }}</li>
+                                            <li>{{ app.user.city }}</li>
                                             <a href="#">Modifier l'adresse</a>
-                                        </address>
+                                        </ul>
+
                                     </div>
                                 </div>
                             </div>
