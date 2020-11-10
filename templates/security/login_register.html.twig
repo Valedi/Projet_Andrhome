@@ -6,6 +6,11 @@
 
 <body class="customer-account-login inner-page">
 <div id="page">
+   {% for message in app.flashes('notice') %}
+        <div class="flash-notice alert alert-info">
+            {{ message }}
+        </div>
+    {% endfor %}
     <!-- Header -->
 
 
@@ -26,7 +31,9 @@
                             <h1>Inscription</h1>
                         </div>
                         <div class="content">
+
                             {{ form(form) }}
+
                         </div>
                     </div>
 
@@ -36,16 +43,17 @@
                         </div>
                         <div class="content">
                             <form action="{{ path('app_login') }}" method="post">
+                                <div class="form-group">
 
-                                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-                                <label for="inputEmail">Email</label>
-                                <input type="email" name="email" id="inputEmail" class="form-control" required autofocus>
-                                <label for="inputPassword">Password</label>
-                                <input type="password" name="password" id="inputPassword" class="form-control" required>
+                                    <label for="inputEmail" class="form-text">Email</label>
+                                    <input type="email" name="email" id="inputEmail" class="form-control" required autofocus>
+                                    <label for="inputPassword">Mot de passe</label>
+                                    <input type="password" name="password" id="inputPassword" class="form-control" required>
 
-                                <input type="hidden" name="_csrf_token"
-                                       value="{{ csrf_token('authenticate') }}"
-                                >
+                                    <input type="hidden" name="_csrf_token"
+                                           value="{{ csrf_token('authenticate') }}"
+                                    >
+                                </div>
 
                                 {#
                                     Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
@@ -59,23 +67,23 @@
                                 #}
 
                                 <button class="btn btn-lg btn-primary" type="submit">
-                                    Sign in
+                                    Connectez-vous !
                                 </button>
                             </form>
                         </div>
                     </div>
-            </fieldset>
+                </fieldset>
 
+                <br>
+                <br>
+                    <p class="required" id="required" >* Veuillez remplir tous les champs</p>
+            </div>
             <br>
             <br>
-                <p class="required">* Champs obligatoires</p>
+            <br>
+            <br>
+            <br>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-</div>
-</section>
+    </section>
 <!-- Main Container End -->
 {% endblock %}

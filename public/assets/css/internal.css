@@ -167,7 +167,7 @@ button.button.btn-share:before {
 	padding-right: 8px;
 }
 button.button.create-account:before {
-	content: "\f007";
+	content: "\f144";
 	font-family: FontAwesome;
 	padding-right: 8px;
 }
@@ -257,7 +257,7 @@ button.button.btn-add:before {
 	padding: 10px 10px 6px;
 }
 .shopping-cart-table-total td { border:none;}
-/*---------- Table css end ---------- */	
+/*---------- Table css end ---------- */
 
 
 /* Error,Success,Confirmation messages */
@@ -423,7 +423,7 @@ input#coupon_code {
 	margin: 8px 0;
 	width: 100%;
 }
-/* 3. Shopping Cart Total Box */	
+/* 3. Shopping Cart Total Box */
 .totals .inner {
 	padding: 15px;
 }
@@ -451,8 +451,8 @@ button.button.btn-proceed-checkout {
 button.button.btn-proceed-checkout:hover {
 	padding: 12px 0px;
 }
-/*======== (B) Multiple Adresses css =========*/	
-/* 1. checkout progress */	
+/*======== (B) Multiple Adresses css =========*/
+/* 1. checkout progress */
 .state_bar {
 	padding: 40px 0;
 	padding-top:5px
@@ -550,7 +550,7 @@ button.button.btn-proceed-checkout:hover {
 .multiple-checkout .buttons-set .button {
 	float: right;
 }
-/* 2.Select Shipping Method */	
+/* 2.Select Shipping Method */
 .multiple-checkout h3 {
 	font-size: 14px;
 	font-weight: bold;
@@ -569,7 +569,7 @@ button.button.btn-proceed-checkout:hover {
 	padding: 0;
 }
 .checkout-multishipping-addresses select { width:auto;}
-/* 3.Place Order */	
+/* 3.Place Order */
 #checkout-review-submit .place-order .grand-total {
 	float: right;
 	text-align: right;
@@ -579,14 +579,14 @@ button.button.btn-proceed-checkout:hover {
 div#review-buttons-container {
 	margin-top: 5px;
 }
-/* 3.Order Success */	
+/* 3.Order Success */
 .checkout-multishipping-success .multiple-checkout .buttons-set .button {
 	float: left !important;
 }
 .form-list label.required {
 	color: #333;
 }
-/*======== (C) Dashboard css =========*/	
+/*======== (C) Dashboard css =========*/
 .my-account {
 	width: 100%;
 }
@@ -661,8 +661,11 @@ div#review-buttons-container {
 	font-size: 16px;
 }
 .required {
-	color: #ff0000;
-	font-size: 12px;
+	color: black;
+	font-size: 16px;
+}
+#required{
+	color: red;
 }
 input[type=radio], input[type=checkbox] { margin-right:4px; }
 /*2. Address Book */
@@ -680,7 +683,7 @@ li.item.empty1 p {
 	border: none;
 }
 .new_address_button { float:right !important; font-size:12px !important; border:none !important; color:#C2A476 !important; margin-top:-45px !important; }
-.new_address_button:hover { color:#fff !important} 
+.new_address_button:hover { color:#fff !important}
 /* 3. My Orders */
 .pager {
 	margin-top:10px }
@@ -822,7 +825,7 @@ table#my-downloadable-products-table {
 	font-size: 14px;
 	font-weight: 300;
 	letter-spacing:1px
-	
+
 }
 .one-page-checkout .step {
 	padding: 0px 10px 10px 45px;
@@ -1016,19 +1019,19 @@ div.mgkosc-wide .input-text {
 .mgkosc-popuptextblock {  overflow: auto; }
 .mgkosc-popuptextdetails{padding:0px 5px 5px;}
 #mgkoscoverlay{ display:none; background: none repeat scroll 0 0 #000000; height:100%; left:0; opacity:0.6; position:fixed; top:0; width:100%; z-index:999; }
-.mgkosc-popupclose{  color:#000000; cursor:pointer; font-size:16px; font-weight:700; line-height:18px; position:absolute; right:10px; text-decoration:none; top:5px; } 
+.mgkosc-popupclose{  color:#000000; cursor:pointer; font-size:16px; font-weight:700; line-height:18px; position:absolute; right:10px; text-decoration:none; top:5px; }
 
 .mgkosc-login{ margin-bottom:15px; padding: 4px 0; }
- #mgkosc-login{ background: none repeat scroll 0 0 #F9F9F9; border: 10px solid #333333; border-radius: 10px 10px 10px 10px; display:none; left:38%; position: fixed; top:200px; width: 350px;z-index: 2000; }  
+ #mgkosc-login{ background: none repeat scroll 0 0 #F9F9F9; border: 10px solid #333333; border-radius: 10px 10px 10px 10px; display:none; left:38%; position: fixed; top:200px; width: 350px;z-index: 2000; }
 #mgkoscloginoverlay{ display:none; background:none repeat scroll 0 0 #000000; height:100%; left:0; opacity:0.6; position:fixed; top:0;width:100%; z-index:999; }
 .mgkosc-logincontent{ background: none repeat scroll 0 0 #F6F6F6; height: auto; overflow: auto;width: auto; }
-.mgkosc-loginclose {  color:#000000; cursor:pointer; font-size:16px; font-weight:700; line-height:18px; position:absolute; right:10px; text-decoration:none; top:6px; }  
+.mgkosc-loginclose {  color:#000000; cursor:pointer; font-size:16px; font-weight:700; line-height:18px; position:absolute; right:10px; text-decoration:none; top:6px; }
 #mgkosc-password{ background: none repeat scroll 0 0 #F9F9F9; border: 10px solid #333333; border-radius: 10px 10px 10px 10px; display: none; left: 50%; margin-left: -170px; position: fixed; top: 200px; width: 350px; z-index: 2000; }
 .mgkosc-logininfo { color: #FFFFFF; font-weight:bold; padding:10px 35px 10px 10px; }
 .mgkosc-login-field{ padding: 0px 10px 10px; }
 #mgkoscforgotpass{float:right;margin-top:12px;}
 .mgkosc-logincontent label { line-height:normal;}
-/*======== (E) Wishlist css =========*/	
+/*======== (E) Wishlist css =========*/
 #wishlist-table {
 	border: none;
 	text-align: left;
@@ -1086,7 +1089,7 @@ div.mgkosc-wide .input-text {
 #wishlist-table textarea {
 	width: 96% !important;
 }
-/*======== (F) Login css =========*/		
+/*======== (F) Login css =========*/
 .account-login {
 	background-color: #FFFFFF;
 }
@@ -1175,7 +1178,7 @@ textarea#sender_message {
 	font-size: 13px;
 	border-radius: 3px;
 }
-/*============= (H) Contact us page ========*/	
+/*============= (H) Contact us page ========*/
 h2.legend {
 	font-size: 16px !important;
 	font-weight: 300;
@@ -1184,7 +1187,7 @@ h2.legend {
 .contacts-index-index.rtl legend {
 	display: none
 }
-/*============= (I) page sitemap ========*/		
+/*============= (I) page sitemap ========*/
 div#sitemap_top_links ul.links {
 	list-style: none;
 	text-align: left
@@ -1216,7 +1219,7 @@ ul.sitemap li {
 	font-size: 13px;
 	padding-bottom: 8px
 }
-/*============= (J) page sitemap ========*/	
+/*============= (J) page sitemap ========*/
 .form-list select {
 	margin: 5px 0 2px;
 	outline: none;
@@ -1398,7 +1401,7 @@ ol#recently-viewed-items p.product-name {
 
 
 
-	
+
 
 
 
