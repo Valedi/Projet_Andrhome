@@ -7,9 +7,10 @@
     <meta name="author" content="">
 
     <title>{% block title %} Andrhome site de vente en ligne d'androïde !{% endblock %}</title>
-
+    <!-- icone de l'onglet -->
+    <link rel="icon" type="image/png"  href="images/logo4bis.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+    <script src="https://js.stripe.com/v3/"></script>
     {% block stylesheets %}
 
         <!-- CSS Style -->
@@ -17,7 +18,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
         <link rel="stylesheet" media="all" href="{{ asset('assets/css/font-awesome.css') }}">
         <link rel="stylesheet" media="all" href="{{ asset('assets/css/simple-line-icons.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/mon_compte.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/jquery.bxslider.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/jquery.mobile-menu.css') }}">
@@ -32,11 +33,14 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/fancybox.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/site-icons.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slider.css') }}">
+        <link rel-="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
         <!-- Google Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,600italic,400italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap" rel="stylesheet">
 
     {% endblock %}
 </head>
@@ -63,6 +67,7 @@
     <script type="text/javascript" src="{{ asset('assets/js/cloud-zoom.js') }}"></script>
 
 {% endblock %}
-</body>
 {% include'components/footer.html.twig' %}
+</body>
+
 </html>

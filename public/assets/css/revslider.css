@@ -29,7 +29,6 @@ website:   	http://www.themepunch.com
     left: 0;
     right: 0;
     height: 105px;
-    background: url(../../images/strip.png) 50% 0 no-repeat;
     z-index: 5;
 }
 
@@ -1453,12 +1452,13 @@ website:   	http://www.themepunch.com
 	border-style:none;
 	border-width:0;
 	color:rgba(255,255,255,1.00);
-	font-family:'Raleway', sans-serif;
+	/*font-family:'Raleway', sans-serif;*/
+	padding: 50px 0;
+	font-family: 'Atomic Age', cursive;
 	font-size:90px;
 	font-style:normal;
 	font-weight:300;
 	line-height:70px;
-	padding:10px 0;
 	text-decoration:none;
 	letter-spacing:5px;
 	text-transform:uppercase
@@ -1472,7 +1472,7 @@ website:   	http://www.themepunch.com
 	border-style:none;
 	border-width:0;
 	color:rgba(255,255,255,1.00);
-	font-family:'Raleway', sans-serif;
+	/*font-family:'Raleway', sans-serif;*/
 	font-size:18px;
 	font-style:normal;
 	font-weight:300;
@@ -1481,7 +1481,8 @@ website:   	http://www.themepunch.com
 	padding:0;
 	text-align:left;
 	text-decoration:none;
-	margin-top:25px
+	margin-top:25px;
+	font-family: 'Atomic Age', cursive;
 }
 
 .tp-caption.NotGeneric-CallToAction,.NotGeneric-CallToAction

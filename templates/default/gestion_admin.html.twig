@@ -4,88 +4,47 @@
 {% block body %}
 
 
-<body class="customer-account-login inner-page">
+<body class="customer-account-index customer-account  inner-page">
 <div id="page">
-    <!-- Header -->
-
-
     {% include'components/nav.html.twig' %}
-
+    {% for message in app.flashes('notice') %}
+    <div class="flash-notice alert alert-info">
+        {{ message }}
+    </div>
+    {% endfor %}
     <!-- Main Container -->
     <section class="main-container col1-layout bounceInUp animated">
         <div class="main container">
             <!-- <div class="account-login"> -->
-            <div class="admin-account">
+
+            <div class="admin-account row">
                 <div class="page-title">
                     <h1>GESTION ADMINISTRATEUR</h1>
 
+
+                    <fieldset class="col2-set">
+
+                        <legend>Nouvel Article</legend>
+                        {{ form(form) }}
+
+                    </fieldset>
+
+
                 </div>
-                <fieldset class="col2-set">
-                    <legend>Nouvel Article</legend>
-                    <div class="col-1 new-users">
-                        <div class="content">
-                            <ul class="form-list">
-                                <li>
-                                    <label for="ref">Référence <span class="required">*</span></label>
-                                    <br>
-                                    <input type="text" title="" class="input-text" id="ref" value="" name="">
-                                </li>
-                                <li>
-                                    <label for="name">Nom du Produit <span class="required">*</span></label>
-                                    <br>
-                                    <input type="name" title="" id="name" class="input-text" name="">
-                                </li>
-                                <li>
-                                    <label for="function">Fonction de l'Androïde <span class="required">*</span></label>
-                                    <br>
-                                    <input type="function" title="" id="function" class="input-text" name="">
-                                </li>
-                            </ul>
+                <br>
+                <br>
 
-
-                        </div>
-                    </div>
-                    <div class="col-2 registered-users">
-                        <div class="content">
-
-                            <ul class="form-list">
-                                <li>
-                                    <label for="image">Image<span class="required">*</span></label>
-                                    <br>
-                                    <!-- <input type="image" src="submit.gif" alt="Submit" style="float:right" width="48" height="48"> -->
-                                    <input type="text" title="" class="input-image" id="image" value="Telecharger une image" name="image du produit">
-                                </li>
-                                <li>
-                                    <label for="description">Description <span class="required">*</span></label>
-                                    <br>
-                                    <input type="description" title="" id="description" class="input-text" name="">
-                                </li>
-                                <li>
-                                    <label for="prix">Prix <span class="required">*</span></label>
-                                    <br>
-                                    <input type="prix" title="" id="prix" class="input-text" name="">
-                                </li>
-                            </ul>
-                            <p class="required">* Champs obligatoires</p>
-                            <div class="buttons-set">
-                                <button class="button create-account"><span>Créer un nouveau produit</span></button>
-                            </div>
-                        </div>
-                    </div>
-            </fieldset>
-            <br>
-            <br>
-
-            <div class ="buttons-set">
-                <button class="button create-account"><span>Afficher la liste des commandes</span></button>
+                <div class ="buttons-set">
+                   <a href="https://dashboard.stripe.com/test/payments?status%5B%5D=successful"><button class="button create-account"  title="liste commandes" target="_blank"><span>Afficher la liste des commandes</span></button></a>
+                </div>
             </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-</div>
-</section>
-<!-- Main Container End -->
-{% endblock %}
+    </section>
+    <!-- Main Container End -->
+    {% endblock %}
+

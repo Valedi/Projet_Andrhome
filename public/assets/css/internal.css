@@ -167,7 +167,7 @@ button.button.btn-share:before {
 	padding-right: 8px;
 }
 button.button.create-account:before {
-	content: "\f007";
+	content: "\f144";
 	font-family: FontAwesome;
 	padding-right: 8px;
 }
@@ -661,8 +661,11 @@ div#review-buttons-container {
 	font-size: 16px;
 }
 .required {
-	color: #c2a476;
+	color: black;
 	font-size: 16px;
+}
+#required{
+	color: red;
 }
 input[type=radio], input[type=checkbox] { margin-right:4px; }
 /*2. Address Book */
