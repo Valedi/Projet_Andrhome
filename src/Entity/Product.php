@@ -35,7 +35,12 @@ class Product
     private $featuredImage;
 
     /**
-     * @ORM\Column(type="decimal")
+     * @ORM\Column(type="string", length=100)
+     */
+    private $function;
+
+    /**
+     * @ORM\Column(type="integer")
      */
     private $price;
 
@@ -54,17 +59,6 @@ class Product
      * @ORM\Column(type="string", length=80)
      */
     private $alias;
-
-    /**
-     * @ORM\Column(type="string", length=80)
-     */
-    private $reference;
-
-    /**
-     * @ORM\Column(type="string", length=20)
-     */
-    private $pricedisplay;
-
 
     public function __construct()
     {
@@ -108,6 +102,18 @@ class Product
     public function setFeaturedImage(string $featuredImage): self
     {
         $this->featuredImage = $featuredImage;
+
+        return $this;
+    }
+
+    public function getFunction(): ?string
+    {
+        return $this->function;
+    }
+
+    public function setFunction(string $function): self
+    {
+        $this->function = $function;
 
         return $this;
     }
@@ -171,30 +177,4 @@ class Product
 
         return $this;
     }
-
-    public function getReference(): ?string
-    {
-        return $this->reference;
-    }
-
-    public function setReference(string $reference): self
-    {
-        $this->reference = $reference;
-
-        return $this;
-    }
-
-    public function getPricedisplay(): ?string
-    {
-        return $this->pricedisplay;
-    }
-
-    public function setPricedisplay(string $pricedisplay): self
-    {
-        $this->pricedisplay = $pricedisplay;
-
-        return $this;
-    }
-
-
 }

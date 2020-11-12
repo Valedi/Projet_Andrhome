@@ -4,11 +4,9 @@
 
 {% block body %}
 
-
 <body class="customer-account-index customer-account inner-page">
 <div id="page">
     {% include'components/nav.html.twig' %}
-
     <!-- Main Container -->
     <section class="main-container col2-right-layout container-fluid">
         <div class="main container">
@@ -19,7 +17,7 @@
                     </div>
                     <div class="my-account">
                         <div class="dashboard">
-                            <div class="welcome-msg"> <strong>Bonjour {{ app.user.firstname }} !</strong>
+                            <div class="welcome-msg"> <strong>Bonjour, Jury!</strong>
                                 <p>Depuis cet espace, retrouvez votre activité récente ainsi que le détail de vos informations.</p>
                             </div>
                             <div class="recent-orders">
@@ -69,16 +67,10 @@
                                 <div class="col2-set">
                                     <div class="col-1">
                                         <h5>Mes Coordonnées</h5>
-                                        <a href="#"></a><br>
-                                        <ul>
-                                            <li> Votre Nom : {{ app.user.lastname }}</li>
-                                            <li> Votre Prenom : {{ app.user.firstname }}</li>
-                                            <li> Votre email de contact : {{ app.user.email }}</li>
-                                            <li> Votre numero de telephone : {{ app.user.telephone }}</li>
-                                        </ul>
-
-
-                                            <a href="#">Modifier vos informations</a> </p>
+                                        <a href="#">Edit</a>
+                                        <p> Edouard ROUBLARD<br>
+                                            e.roub@gmail.com<br>
+                                            <a href="#">Modifier le mot de passe </a> </p>
                                     </div>
 
                                 </div>
@@ -87,22 +79,25 @@
 
                                     <div class="col-1">
                                         <h5> Adresse de Facturation</h5>
-                                        <ul>
-                                            <li>{{ app.user.adress }}</li>
-                                            <li>{{ app.user.postalcode }}</li>
-                                            <li>{{ app.user.city }}</li>
+                                        <address>
+                                            Edouard Roublard<br>
+                                            aundh<br>
+                                            tyyrt,  Alabama, 46532<br>
+                                            United States<br>
+                                            T: 454541 <br>
                                             <a href="#">Modifier l'adresse</a>
-                                        </ul>
+                                        </address>
                                     </div>
                                     <div class="col-2">
                                         <h5>Adresse de Livraison</h5>
-                                        <ul>
-                                            <li>{{ app.user.adress }}</li>
-                                            <li>{{ app.user.postalcode }}</li>
-                                            <li>{{ app.user.city }}</li>
+                                        <address>
+                                            Edouard Roublard<br>
+                                            aundh<br>
+                                            tyyrt,  Alabama, 46532<br>
+                                            United States<br>
+                                            T: 454541 <br>
                                             <a href="#">Modifier l'adresse</a>
-                                        </ul>
-
+                                        </address>
                                     </div>
                                 </div>
                             </div>
@@ -116,6 +111,13 @@
             </div>
           </section>
 
+                <!-- Brand logo starts  -->
+
+                <!-- Brand logo ends  -->
+
+                <!-- Footer -->
+
+                <!-- JavaScript -->
 
 
 {% endblock %}
